@@ -71,6 +71,7 @@ int ptrace_poketext(pid_t pid, long address, unsigned long *payload, size_t len_
             exit(EXIT_FAILURE);
         }
     }
+    info("code injected successfully -> %p", address);
     return 0;
 }
 
