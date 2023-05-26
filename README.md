@@ -3,7 +3,7 @@
 ### How run ?
 - cd ptrace
 - make all
-- ./injector <PID> <shellcode.txt>
+- sudo ./injector PID <path_shellcode.txt>
 
 ### Shellcodes:
 - shellcode01.txt -> spawn /bin/sh
