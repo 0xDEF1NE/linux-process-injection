@@ -9,13 +9,9 @@
 #include <stdio.h>
 
 #define log_plain(fmt, ...) fprintf(stderr, fmt "", ##__VA_ARGS__)
-#define log(fmt, ...) log_plain("%-8.8s:%4d: " fmt, __FILE__, __LINE__, ##__VA_ARGS__)
 #define error(fmt, ...) log_plain("\x1b[0;31m[fail] " fmt "\x1b[0m", ##__VA_ARGS__)
 #define warn(fmt, ...) log_plain("\x1b[0;33m[warn] " fmt "\x1b[0m", ##__VA_ARGS__)
 #define info(fmt, ...) log_plain("\x1b[0;36m[info] " fmt "\x1b[0m", ##__VA_ARGS__)
-
-#define sysfail(name) error("'%s' system call failed with code %d: %s", name, errno, strerror(errno))
-#define callfail(name) error("'%s' call failed: %s", name, strerror(errno))
 
 #define CHECK_MEMORY_ALLOC(ptr) \
     if (!ptr) { \
