@@ -39,6 +39,16 @@ char *vasprintfEx(const char *fmt, va_list args)
     return p;
 }
 
+void _memcpy(void *destaddr, const void *srcaddr, int len)
+{
+  char *src_addr = (char *)srcaddr; 
+  char *dest = (char *)destaddr;
+
+  while (len-- > 0)
+    *dest++ = *src_addr++;
+
+}
+
 char *asprintfEx(const char *fmt, ...)
 {
     va_list args;
