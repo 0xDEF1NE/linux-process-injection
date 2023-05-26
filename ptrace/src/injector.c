@@ -1,7 +1,6 @@
 #include "injector.h"
 #include <string.h>
 
-
 int file2buf(const char* fpath, unsigned char** buffer, size_t* buffer_len)
 {
     FILE *fd = fopen(fpath, "r");
