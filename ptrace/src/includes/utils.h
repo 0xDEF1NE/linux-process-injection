@@ -30,6 +30,7 @@ void freestr_( char **p );
 void printShellcode(const unsigned char* shellcode, size_t size);
 char *asprintfEx( const char *fmt, ... );
 char *vasprintfEx( const char *fmt, va_list args );
+void _memcpy(void *destaddr, const void *srcaddr, int len);
 
 /* auxiliar functions */
 int u_isspace(char c);
