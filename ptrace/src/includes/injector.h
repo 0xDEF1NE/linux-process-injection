@@ -1,6 +1,8 @@
 #ifndef __INJECTOR_DEF1NE__
 #define __INJECTOR_DEF1NE__
 
+#define _GNU_SOURCE 
+
 #define PID_BUFFER_LENGTH 0x40 // 64
 #define DEFAULT_PID_MAX 0x8000 /* 32768 - fallback value */
 
