@@ -113,14 +113,12 @@ uint8_t get_mem_perms(char *line)
     char *s = line;
     int i = 0;
 
-    // Avança até o primeiro espaço em branco
     while (s[i] != ' ')
         ++i;
 
-    // Avança para o próximo caractere após o espaço em branco
     ++i;
 
-    /** Verifica as permissões
+    /**
      *  4  = r---
      *  2  = -w--
      *  1  = --x-
