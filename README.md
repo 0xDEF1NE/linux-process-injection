@@ -1,5 +1,10 @@
 # linux-process-injection
 
+### How run ?
+- cd ptrace
+- make all
+- ./injector <PID> <shellcode.txt>
+
 ### Shellcodes:
 - shellcode01.txt -> spawn /bin/sh
 - shellcode02.txt -> write("hello world!")
