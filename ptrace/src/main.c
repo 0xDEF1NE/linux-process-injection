@@ -3,7 +3,6 @@
 #include <sys/ptrace.h>
 #include <sys/wait.h>
 #include <errno.h>
-#include <string.h>
 
 #include "utils.h"
 #include "injector.h"
@@ -55,7 +54,7 @@ int main(int argc, char *argv[])
 
     struct user_regs_struct regs;
 
-    memcpy(&regs, save_registers, sizeof(struct user_regs_struct));
+    _memcpy(&regs, save_registers, sizeof(struct user_regs_struct));
     regs.rip = proc_info->address+2;
     
     if(ptrace_setregs(AttachPID, &regs) < 0) 
