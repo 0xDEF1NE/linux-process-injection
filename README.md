@@ -1,5 +1,5 @@
 # linux-process-injection
-<img src="images/ptrace.png">
+<img src="images/ptrace01.png">
 
 ### How run ?
 - cd ptrace
