@@ -8,9 +8,11 @@ int file2buf(const char* fpath, unsigned char** buffer, size_t* buffer_len)
     struct stat st;
 
     fstat(fileno(fd), &st);
-    buf = malloc(st.st_size);
+    // +1 btye (NOP)
+    buf = malloc(st.st_size+1);
     CHECK_MEMORY_ALLOC(buf);
-
+    buf[0] = '\x90'; // rip+2 
+    
     while (fscanf(fd, "\\x%02x", &c) != EOF)
         buf[b_length++] = c;
     
